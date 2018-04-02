@@ -17,7 +17,7 @@ $(function(){
     var note= $("#task-note").val();
     var newTask = new Task(task, date, note);
     var notes = newTask.noteArray();
-    $(".tasks-list").append("<div class ='task'><h5>" + newTask.task + "</h5><div class='hidden'> <p>Complete this task by " + newTask.date + "</p> <h5>Notes:</h5><p>" + notes + "</p><button type='button' name='button' class='done btn btn-secondary'>Done</button></div></div>");
+    $(".tasks-list").append("<div class ='task'><h5>" + newTask.task + "</h5><div class='hidden'> <p>Complete this task by " + newTask.date + "</p> <h5>Notes:</h5><p>" + notes + "</p><button type='button' name='button' class='done btn btn-info'>Done</button></div></div>");
 
     $("#new-task").val("");
     $(".task").last().click(function() {

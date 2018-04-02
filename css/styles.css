@@ -1,3 +1,21 @@
 .hidden {
   display: none;
 }
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background-color: #cceeff;
+}
+
+body {
+  background-color: #eafdff;
+  font-family: georgia;
+}
+
+.border-left {
+  border-left: 1px solid black;
+}
