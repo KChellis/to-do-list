@@ -19,24 +19,25 @@
               <input type="text" class="form-control" id="new-task">
             </div>
             <div class="form-group">
-              <label for="due-date">Add the date this needs to be completed by:</label>
+              <label for="due-date">Due date:</label>
               <input type="date"  id="due-date">
+            </div>
+            <div class="form-group">
+              <label for="task-note">Notes:</label>
+              <input type="text" class="form-control" id="task-note">
             </div>
             <button type="submit" class="btn btn-secondary">Add</button>
           </form>
         </div>
         <div class="col-md-6">
           <h2>Tasks:</h2>
-          <ul id="tasks-list">
-          </ul>
+          <div class="tasks-list">
+
+          </div>
         </div>
-        <div id="finished-tasks" class="col-md-6">
-          <h2>Completed Tasks:</h2>
-          <ul id="done-list">
-          </ul>
-        </div>
+
       </div>
-      <div class="modal" id="infoModal" tabindex="-1" role="dialog">
+      <!-- <div class="modal" id="infoModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -53,7 +54,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
