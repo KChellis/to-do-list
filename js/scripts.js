@@ -17,15 +17,14 @@ $(function(){
     var note= $("#task-note").val();
     var newTask = new Task(task, date, note);
     var notes = newTask.noteArray();
-    $(".tasks-list").append("<h5>" + newTask.task + "</h5><div class='hidden'> <p>Complete this task by " + newTask.date + "</p> <h5>Notes:</h5><ul id='notes-list'></ul></div>");
-    for (var i = 0; i < notes.length; i++) {
-      $("#notes-list").append("<li>" + notes[i] + "</li>")
-    }
+    $(".tasks-list").append("<div class ='task'><h5>" + newTask.task + "</h5><div class='hidden'> <p>Complete this task by " + newTask.date + "</p> <h5>Notes:</h5><p>" + notes + "</p><button type='button' name='button' class='done btn btn-secondary'>Done</button></div></div>");
 
     $("#new-task").val("");
-
     $(".task").last().click(function() {
-
+      $(this).find(".hidden").slideToggle();
+    });
+    $(".done").last().click(function() {
+      $(this).parents(".task").remove();
     });
   });
 });
