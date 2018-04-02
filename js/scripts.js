@@ -1,19 +1,28 @@
-function Task(task){
+function Task(task, date){
   this.task=task;
-  this.done=false;
+  this.date=date;
 }
 
 $(function(){
   $("#form").submit(function(event) {
     event.preventDefault();
+
     var task= $("#new-task").val();
-    var newTask = new Task(task);
-    $("#tasks-list").append("<li class='task'>" + newTask.task + "</li>");
+    var date= $("#due-date").val();
+    var newTask = new Task(task, date);
+    $("#tasks-list").append("<li class='task'>" + newTask.task + "<button type='button' class='btn btn-secondary' data-toggle='modal' data-target= '#infoModal'>Info</button></li>");
 
     $("#new-task").val("");
+    // $('#infoModal').on('shown.bs.modal', function () {
+    // });
+    // $(".modalButton").click(function(){
+    //   $("#infoModal").modal("show");
+    // });
 
-    $(".task").click(function(){
-      $(this).remove();
-    });
+    // $(".task").last().click(function() {
+    //   $(this).remove();
+    // });
+
+
   });
 });

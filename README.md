@@ -13,7 +13,7 @@ _This page can takes input tasks and creates a to do list. Users can select item
 | :-------------     | :------------- | :------------- |
 | **When user inputs task, program displays task in to do list** | User input: blink | 'Output: blink' |
 | **When user inputs additional task, program displays all tasks in to do list** | User input: breathe | 'Output: blink, breathe' |
-| **Wehn user clicks task in to do list, program removes task form list**| User Input: click blink | Output: breathe |
+| **When user clicks task in to do list, program removes task form list**| User Input: click blink | Output: breathe |
 
 
 ## Setup/Installation Requirements

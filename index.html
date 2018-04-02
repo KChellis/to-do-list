@@ -17,6 +17,10 @@
               <label for="new-task">Add a task:</label>
               <input type="text" class="form-control" id="new-task">
             </div>
+            <div class="form-group">
+              <label for="due-date">Add the date this needs to be completed by:</label>
+              <input type="date"  id="due-date">
+            </div>
             <button type="submit" class="btn btn-secondary">Add</button>
           </form>
         </div>
@@ -25,7 +29,30 @@
           <ul id="tasks-list">
           </ul>
         </div>
+        <div id="finished-tasks" class="col-md-6">
+          <h2>Completed Tasks:</h2>
+          <ul id="done-list">
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="modal" id="infoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Congratulations <span id="user"></span>!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Your booking for <span id="dateTime"></span> is complete!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
