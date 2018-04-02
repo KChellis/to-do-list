@@ -8,6 +8,12 @@ $(function(){
     event.preventDefault();
     var task= $("#new-task").val();
     var newTask = new Task(task);
-    $("#tasks-list").append("<li><span class='task'>" + newTask.task + "</span></li>");
+    $("#tasks-list").append("<li class='task'>" + newTask.task + "</li>");
+
+    $("#new-task").val("");
+
+    $(".task").click(function(){
+      $(this).remove();
+    });
   });
 });
